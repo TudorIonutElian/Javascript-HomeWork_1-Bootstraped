@@ -374,6 +374,10 @@
             div08result.innerText = reverseInput(f08input01.value);
             div08result.style.display = "block";
             div08result.style.backgroundColor = "#eeee00";
+        }else if(!isNaN(f08input01.value)){
+            div08result.innerText = "Sintagma " + f08input01.value + " nu este string!";
+            div08result.style.display = "block";
+            div08result.style.backgroundColor = "#eeee00";
         }
         
     }
