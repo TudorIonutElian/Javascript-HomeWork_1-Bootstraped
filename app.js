@@ -379,7 +379,6 @@
             div08result.style.display = "block";
             div08result.style.backgroundColor = "#eeee00";
         }
-        
     }
     function reverseInput(text){
         // Sparge array-ul din input
@@ -398,6 +397,119 @@
         f08input01.value = "";
         f08result.innerText  = "";
         div08result.style.display = "none";
+    }
+
+//Functia 9
+
+    // Declarare variabile pentru functia 9
+    var f09input01          = document.getElementById('f09input01');
+    var f09result           = document.getElementById('f09result');
+    var div09result         = document.getElementById('div09result');
+    var button09function09  = document.getElementById('button-calc-09');
+    var buttonreset09       = document.getElementById('button-reset-09');
+
+    // Declarare evenimente pentru functia 9
+    button09function09.addEventListener("click", checkValuesfunction09);
+    buttonreset09.addEventListener("click", resetFunction09);
+
+    // Declarare functii pentru functia 9
+    function checkValuesfunction09(){
+        
+        //Validare input de la tastatura
+        if(isNaN(f09input01.value)){
+            div09result.innerText = "Sintagma " + f09input01.value + " este string.";
+            div09result.style.display = "block";
+            div09result.style.backgroundColor = "#eeee00";
+        }else {
+            div09result.innerText = "Suma primelor " + f09input01.value + " numere inpare pozitive este "  + produsulNumerelorImpare(f09input01.value);
+            div09result.style.display = "block";
+            div09result.style.backgroundColor = "#eeee00";
+        }
+        
+    }
+    function produsulNumerelorImpare(n){
+        var suma  = 1;
+        for(var i = 1; i <= 2*n-1; i+=2){
+            suma = suma * i;
+        }
+        return suma;
+    }
+
+    function resetFunction09(){
+        f09input01.value = "";
+        f09result.innerText  = "";
+        div09result.style.display = "none";
+    }
+
+//Functia 10
+
+    // Declarare variabile pentru functia 10
+    var f10input01          = document.getElementById('f10input01');
+    var f10input02         = document.getElementById('f10input02');
+    var f10result           = document.getElementById('f10result');
+    var div10result         = document.getElementById('div10result');
+    var button10function10  = document.getElementById('button-calc-10');
+    var buttonreset10       = document.getElementById('button-reset-10');
+
+    // Declarare evenimente pentru functia 10
+    button10function10.addEventListener("click", checkValuesfunction10);
+    buttonreset10.addEventListener("click", resetFunction10);
+
+    // Declarare functii pentru functia 10
+    function checkValuesfunction10(){
+        var numere = f10input01.value;
+        var numereArray = numere.split("");
+        var numar = f10input02.value;
+
+        div10result.innerText = verificaIncluderea(numereArray, numar);
+        div10result.style.display = "block";
+        div10result.style.backgroundColor = "#eeee00";
+        
+    }
+    function verificaIncluderea(x, y){
+        if(x.includes(y)){
+            return "Numarul " + y + " este inclus in colectia de numere " + x;
+        }else {
+            return "Numarul " + y + " nu este inclus in colectia de numere " + x;
+        }
+    }
+
+    function resetFunction10(){
+        f10input01.value = "";
+        f10result.innerText  = "";
+        div10result.style.display = "none";
+    }
+
+//Functia 11
+
+    // Declarare variabile pentru functia 11
+    var f11input01          = document.getElementById('f11input01');
+    var f11result           = document.getElementById('f11result');
+    var div11result         = document.getElementById('div11result');
+    var button11function11  = document.getElementById('button-calc-11');
+    var buttonreset11       = document.getElementById('button-reset-11');
+
+    // Declarare evenimente pentru functia 11
+    button11function11.addEventListener("click", checkValuesfunction11);
+    buttonreset11.addEventListener("click", resetFunction11);
+
+    // Declarare functii pentru functia 11
+    function checkValuesfunction11(){
+        var numere = f11input01.value;
+        var numereArray = numere.split(" ");
+        alert(numereArray);
+
+        div11result.innerText = Math.max(numereArray);
+        div11result.style.display = "block";
+        div11result.style.backgroundColor = "#eeee00";
+        
+    }
+
+
+    function resetFunction11(){
+        f11input01.value = "";
+        f11result.innerText  = "";
+        div11result.style.display = "none";
     }
 
 

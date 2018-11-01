@@ -33,7 +33,10 @@ body {
 #div05result,
 #div06result,
 #div07result,
-#div08result {
+#div08result,
+#div09result,
+#div10result,
+#div11result {
     display: none;
     padding: 10px;
 }
