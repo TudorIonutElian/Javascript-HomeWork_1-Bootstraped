@@ -497,9 +497,8 @@
     function checkValuesfunction11(){
         var numere = f11input01.value;
         var numereArray = numere.split(" ");
-        alert(numereArray);
-
-        div11result.innerText = Math.max(numereArray);
+        
+        div11result.innerText = Math.max(... numereArray);
         div11result.style.display = "block";
         div11result.style.backgroundColor = "#eeee00";
         
