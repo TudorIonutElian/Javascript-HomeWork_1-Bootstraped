@@ -26,6 +26,11 @@ body {
     border: 2px solid #ddd;
     border-bottom: 2px solid #0253eb;
 }
+
+.container-red {
+    border: 2px solid #ddd;
+    border-bottom: 2px solid #eb0229;
+}
 #div01result,
 #div02result,
 #div03result,
@@ -36,7 +41,10 @@ body {
 #div08result,
 #div09result,
 #div10result,
-#div11result {
+#div11result,
+#div12result,
+#div13result,
+#div15result {
     display: none;
     padding: 10px;
 }

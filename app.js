@@ -510,6 +510,114 @@
         f11result.innerText  = "";
         div11result.style.display = "none";
     }
+//Functia 12
+
+    // Declarare variabile pentru functia 12
+    var f12input01          = document.getElementById('f12input01');
+    var f12result           = document.getElementById('f12result');
+    var div12result         = document.getElementById('div12result');
+    var button12function12  = document.getElementById('button-calc-12');
+    var buttonreset12       = document.getElementById('button-reset-12');
+
+    // Declarare evenimente pentru functia 11
+    button12function12.addEventListener("click", checkValuesfunction12);
+    buttonreset12.addEventListener("click", resetFunction12);
+
+    // Declarare functii pentru functia 12
+    function checkValuesfunction12(){
+        var numere = f12input01.value;
+        var numereArray = numere.split(" ");
+        var numarMaxim = Math.max(... numereArray);
+        var numarMinim = Math.min(... numereArray);
+        var suma = numarMaxim + numarMinim;
+
+        div12result.innerText = suma;
+        div12result.style.display = "block";
+        div12result.style.backgroundColor = "#eeee00";
+        
+    }
+
+    function resetFunction12(){
+        f12input01.value = "";
+        f12result.innerText  = "";
+        div12result.style.display = "none";
+    }
+
+//Functia 13
+
+    // Declarare variabile pentru functia 13
+    var f13input01          = document.getElementById('f13input01');
+    var f13result           = document.getElementById('f13result');
+    var div13result         = document.getElementById('div13result');
+    var button13function13  = document.getElementById('button-calc-13');
+    var buttonreset13       = document.getElementById('button-reset-13');
+
+    // Declarare evenimente pentru functia 13
+    button13function13.addEventListener("click", checkValuesfunction13);
+    buttonreset13.addEventListener("click", resetFunction13);
+
+    // Declarare functii pentru functia 13
+    function checkValuesfunction13(){
+        var numere = f13input01.value;
+        var numereArray = numere.split(" ");
+
+        let findDuplicates = (arr) => arr.filter((item, index) => arr.indexOf(item) != index)
+        
+        div13result.innerText = findDuplicates(numereArray);
+        div13result.style.display = "block";
+        div13result.style.backgroundColor = "#eeee00";
+        
+    }
+
+
+    function resetFunction13(){
+        f13input01.value = "";
+        f13result.innerText  = "";
+        div13result.style.display = "none";
+    }
+
+//Functia 15
+
+    // Declarare variabile pentru functia 15
+    var f15input01          = document.getElementById('f15input01');
+    var f15result           = document.getElementById('f15result');
+    var div15result         = document.getElementById('div15result');
+    var button15function15  = document.getElementById('button-calc-15');
+    var buttonreset15       = document.getElementById('button-reset-15');
+
+    // Declarare evenimente pentru functia 13
+    button15function15.addEventListener("click", checkValuesfunction15);
+    buttonreset15.addEventListener("click", resetFunction15);
+
+    // Declarare functii pentru functia 15
+    function checkValuesfunction15(){
+        var input = f15input01.value;
+
+        div15result.innerText = verificaPalindrom(input);
+        div15result.style.display = "block";
+        div15result.style.backgroundColor = "#eeee00";
+        
+    }
+
+    function verificaPalindrom(input){
+        if(input !== ""){
+            var inputText = input;
+            var splitInput = inputText.split("");
+            var reversedInput = splitInput.reverse();
+            var joinedInput = reversedInput.join("");
+            if(input === joinedInput){
+                return "Valoarea " + "\"" + input + "\"" + " este un palindrom. Puteti merge mai departe";
+            }else{
+                return "Valoarea " + "\"" + input + "\"" + " NU este un palindrom. Nu puteti merge mai departe";
+            }
+        }
+        
+    }
+    function resetFunction15(){
+        f15input01.value = "";
+        f15result.innerText  = "";
+        div15result.style.display = "none";
+    }
 
 
 
