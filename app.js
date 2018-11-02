@@ -543,7 +543,7 @@
         div12result.style.display = "none";
     }
 
-//Functia 13
+//Functia 13 - Code editat cu sintaxa incepatori
 
     // Declarare variabile pentru functia 13
     var f13input01          = document.getElementById('f13input01');
@@ -558,17 +558,26 @@
 
     // Declarare functii pentru functia 13
     function checkValuesfunction13(){
-        var numere = f13input01.value;
-        var numereArray = numere.split(" ");
-
-        let findDuplicates = (arr) => arr.filter((item, index) => arr.indexOf(item) != index)
-        
-        div13result.innerText = findDuplicates(numereArray);
+        div13result.innerText = verificareDuplicat(f13input01.value);
         div13result.style.display = "block";
         div13result.style.backgroundColor = "#eeee00";
-        
     }
-
+    //Verificare duplicat
+    function verificareDuplicat(arr){
+        var rezultat = [];
+        for(var i = 0; i < arr.length; i++){
+            for(var j = i + 1; j < arr.length; j++){
+                if((arr[i] == arr[j]) && i != j){
+                    rezultat.push(arr[i]);
+                }
+            }
+        }
+        if(rezultat.length == "0"){
+            return "Nu aveti caractere duplicat";
+        }else {
+            return rezultat + " sunt valori duplicat";
+        }
+    }
 
     function resetFunction13(){
         f13input01.value = "";
