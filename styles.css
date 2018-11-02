@@ -44,11 +44,16 @@ body {
 #div11result,
 #div12result,
 #div13result,
+#div14result,
 #div15result {
     display: none;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
 }
-
+.row-status{
+    color: #0d8302;
+    padding: 3px 5px 0;
+    font-weight: bold;
+}
 
 
 /* ----- Container Header CSS Rules -----*/
